@@ -103,4 +103,4 @@ A sample of misclassified digits like this can be saved simply by setting `SHOW_
 
 As you can see the digits that the model struggles with are actually pretty weird and even a human would struggle to know what digit some of these images were meant to represent! Seems that even a powerful machine learning model struggles to know what you mean if your hand writing is terrible :) What this essentially shows us it that the model is approaching human level accuracy and that significant further gains in performance will be difficult to achieve.
 
-I hope this repo helps to demonstrate the power of a CNN and how you can use low level TensorFlow to implement one, and even implement extra features like batch normalization and dropout. Have fun with it and please feel free to let me know about any suggestions or issues!
+I hope this repo helps to demonstrate the power of a CNN and how you can use low level TensorFlow to implement one. You can even implement extra features like batch normalization and dropout yourself. Have fun with it and please feel free to let me know about any suggestions or issues!
