@@ -6,7 +6,7 @@ This is a [TensorFlow](https://www.tensorflow.org) implementation of a [convolut
 
 I've also used TensorFlow's great visualisation tool [TensorBoard](https://www.tensorflow.org/tensorboard). This allows you to visualise the progress of training as well as visualise the whole computational graph you define in your code.
 
-<img src=resources/tensorboard_example.png width=100%>
+<img src=resources/tensorboard_example.png width=70%>
 
 The [MNIST dataset](https://en.wikipedia.org/wiki/MNIST_database) is a large collection of images of hand written digits. Its a nice and simple dataset to apply data science and machine learning methods to in order to demonstrate their use and benchmark their performance. Here are some examples:
 
