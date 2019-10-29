@@ -28,9 +28,9 @@ To run on CPU, clone the repo and then execute the following commands:
 
 To run on a GPU (recommended if you can - model will train a lot faster) you will need an NVIDIA GPU with [CUDA installed and setup](https://docs.nvidia.com/cuda/#installation-guides). Execute the following commands:
 ```
-> conda create -n CNN_MNIST_GPU python=3.7 pip
+> conda create -n CNN_MNIST_GPU python=3.6 pip
 > source activate CNN_MNIST_GPU
-> conda install tensorflow-gpu
+> conda install tensorflow-gpu=1.14 cudatoolkit=9.0
 > pip install -r requirements.txt
 > python run.py
 ```
