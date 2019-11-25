@@ -21,7 +21,7 @@ To run on CPU, clone the repo and then execute the following commands:
 ```
 > conda create -n CNN_MNIST python=3.7 pip
 > source activate CNN_MNIST
-> conda install tensorflow
+> conda install tensorflow=1.14
 > pip install -r requirements.txt
 > python run.py
 ```
