@@ -2,11 +2,15 @@
 
 By Oscar Bennett, 2019
 
+## Overview
+
 This is a [TensorFlow](https://www.tensorflow.org) implementation of a [convolutional neural network (CNN)](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/) applied to the task of image recognition using the MNIST dataset. This is a toy example of a computer vision task which demonstrates the power of CNNs at extracting information from images. I've avoided using any high level APIs (like Keras) and implemented most of the functionality with low level operations from scratch in order to be explicit about how everything works. There is a nice explanation of how CNNs work [here](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/).
 
 I've also used TensorFlow's great visualisation tool [TensorBoard](https://www.tensorflow.org/tensorboard). This allows you to visualise the progress of training as well as visualise the whole computational graph you define in your code.
 
 <img src=resources/tensorboard_example.png width=70%>
+
+## The Dataset
 
 The [MNIST dataset](https://en.wikipedia.org/wiki/MNIST_database) is a large collection of images of hand written digits. Its a nice and simple dataset to apply data science and machine learning methods to in order to demonstrate their use and benchmark their performance. Here are some examples:
 
@@ -16,6 +20,8 @@ The [MNIST dataset](https://en.wikipedia.org/wiki/MNIST_database) is a large col
 The task here is to predict the digit labels from the image data. This task is actually also a long running [Kaggle competition](https://www.kaggle.com/c/digit-recognizer/overview) run to help people experiment with simple computer vision techniques. The model in this repo once trained will reach approximately 99.5% accuracy which is close to what is thought to be the highest possible (~99.7%). Getting that last tiny performance boost to reach 99.7% usually requires an ensemble of multiple models.
 
 The datasets used to train and test the model are provided by Kaggle and can be downloaded [here](https://www.kaggle.com/c/digit-recognizer/data). Download the `train.csv` and `test.csv` files and put them in the top directory of this repo.
+
+## How To Run
 
 To run on CPU, clone the repo and then execute the following commands:
 ```
@@ -39,11 +45,15 @@ The above commands will setup the environment in [conda](https://docs.conda.io/e
 
 The final trained TensorFlow model checkpoints are saved in a `model/` directory. The logs for TensorBoard are saved in a `tf_logs/` directory.
 
+## Visualize Training
+
 To view the training progress or the computational graph on TensorBoard type:
 ```
 > tensorboard --logdir tf_logs
 ```
 Then open the provided url in a browser.
+
+## Variable Parameters
 
 The model hyperparameters are set at reasonably good values, but if you want to play with them they are defined at the top of the `run.py` file:
 
@@ -54,6 +64,8 @@ batch_size = 64
 dropout_rate = 0.4
 percent_data_for_training = 90
 ```
+
+## Diving into Details
 
 To improve the performance of the model I implemented a few basic model and training features such [batch normalization](https://arxiv.org/abs/1502.03167), [early stopping](https://en.wikipedia.org/wiki/Early_stopping), [dropout](http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf), and [data augmentation](https://medium.com/nanonets/how-to-use-deep-learning-when-you-have-limited-data-part-2-data-augmentation-c26971dc8ced). If you're curious about these techniques just follow the links to discover more. I've implemented each from scratch to demonstrate how they work (all in the `tools.py` file except for early stopping).
 
@@ -94,6 +106,8 @@ def data_augmentation(X_batch):
     X_batch_aug = image_stack_rot_shift
     return X_batch_aug
 ```
+
+## Misclassified Examples
 
 The fact that a CNN like this can reach 99.5% accuracy is impressive and is testament to the power of CNNs in general. When trying to improve a model it can be instructive to look at the training or validation examples that the model is getting wrong. Here are some examples of the digits that the trained model misclassifies:
 
