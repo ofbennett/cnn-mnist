@@ -4,7 +4,7 @@ By Oscar Bennett, 2019
 
 ## Overview
 
-This is a [TensorFlow](https://www.tensorflow.org) implementation of a [convolutional neural network (CNN)](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/) applied to the task of image recognition using the MNIST dataset. This is a toy example of a computer vision task which demonstrates the power of CNNs at extracting information from images. I've avoided using any high level APIs (like Keras) and implemented most of the functionality with low level operations from scratch in order to be explicit about how everything works. There is a nice explanation of how CNNs work [here](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/).
+This is a [TensorFlow](https://www.tensorflow.org) (1.x) implementation of a [convolutional neural network (CNN)](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/) applied to the task of image recognition using the MNIST dataset. This is a toy example of a computer vision task which demonstrates the power of CNNs at extracting information from images. I've avoided using any high level APIs (like Keras) and implemented most of the functionality with low level operations from scratch in order to be explicit about how everything works. There is a nice explanation of how CNNs work [here](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/).
 
 I've also used TensorFlow's great visualisation tool [TensorBoard](https://www.tensorflow.org/tensorboard). This allows you to visualise the progress of training as well as visualise the whole computational graph you define in your code.
 
